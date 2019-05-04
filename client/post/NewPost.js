@@ -14,14 +14,14 @@ import PhotoCamera from 'material-ui-icons/PhotoCamera'
 
 const styles = theme => ({
   root: {
-    backgroundColor: '#ce93d8',
+    backgroundColor: '#ba68c8',
     padding: `${theme.spacing.unit*3}px 0px 1px`
   },
   card: {
     maxWidth:600,
     margin: 'auto',
     marginBottom: theme.spacing.unit*3,
-    backgroundColor: '#ce93d8',
+    backgroundColor: 'white',
     boxShadow: 'none'
   },
   cardContent: {
@@ -32,7 +32,7 @@ const styles = theme => ({
   cardHeader: {
     paddingTop: 8,
     paddingBottom: 8,
-    backgroundColor: '#ce93d8'
+    backgroundColor: '#ba68c8'
   },
   photoButton: {
     height: 30,
