@@ -15,19 +15,21 @@ const styles = theme => ({
     flexGrow: 1,
     margin: 30,
   },
-  card: {
-    maxWidth: 600,
-    margin: 'auto',
-    marginTop: theme.spacing.unit * 5,
-    backgroundColor: '#ce93d8'
-  },
-  title: {
-    padding:`${theme.spacing.unit * 3}px ${theme.spacing.unit * 2.5}px ${theme.spacing.unit * 2}px`,
-    color: theme.palette.text.secondary
-  },
+  // card: {
+  //   maxWidth: 600,
+  //   margin: 'auto',
+  //   marginTop: theme.spacing.unit * 5,
+  //   backgroundColor: '#ce93d8'
+  // },
+  // title: {
+  //   padding:`${theme.spacing.unit * 3}px ${theme.spacing.unit * 2.5}px ${theme.spacing.unit * 2}px`,
+  //   color: theme.palette.text.secondary
+  // },
 
   media: {
-    minHeight: 330
+    padding: 0,
+    minWidth: 1570,
+    minHeight: 640
   }
 })
 
@@ -57,15 +59,15 @@ class Home extends Component {
           <Grid container spacing={24}>
             <Grid item xs={12}>
               <Card className={classes.card}>
-                <Typography type="headline" component="h1" className={classes.title}>
+                {/* <Typography type="headline" component="h1" className={classes.title}>
                   WEDDING SOCIAL
-                </Typography>
+                </Typography> */}
                 <CardMedia className={classes.media} image={weddingImg} title="Ocean Wedding"/>
-                <CardContent>
+                {/* <CardContent>
                   <Typography type="body1" component="p">
                     WELCOME TO THE START OF YOUR BEST ADVENTURE! 
                   </Typography>
-                </CardContent>
+                </CardContent> */}
               </Card>
             </Grid>
           </Grid>
