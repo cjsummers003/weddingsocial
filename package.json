@@ -2,13 +2,18 @@
   "name": "weddingsocial",
   "version": "1.0.0",
   "description": "Social Netork for life's best adventure",
-  "main": "index.js",
+  "main": "./dist/server.generated.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "development": "nodemon",
+    "start:prod": "node server.js",
+    "start:dev": "npm run development",
+    "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cjsummers003/weddingsocial.git"
+    "url": "https://github.com/cjsummers003/weddingsocial.git"
   },
   "author": "CJ Summers, Regine Lyons, Trevor Peacock",
   "license": "ISC",
@@ -19,23 +24,14 @@
     "node",
     "mern"
   ],
-  
   "bugs": {
     "url": "https://github.com/cjsummers003/weddingsocial/issues"
   },
   "homepage": "https://github.com/cjsummers003/weddingsocial#readme",
-  "main": "./dist/server.generated.js",
-  "scripts": {
-    "development": "nodemon",
-    "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:development"
-  },
-
   "engines": {
     "node": "8.11.1",
     "npm": "5.8.0"
   },
-  
   "devDependencies": {
     "babel-core": "6.26.2",
     "babel-loader": "7.1.4",
@@ -50,7 +46,6 @@
     "webpack-hot-middleware": "2.22.1",
     "webpack-node-externals": "1.7.2"
   },
-  
   "dependencies": {
     "body-parser": "1.18.2",
     "compression": "1.7.2",
@@ -60,6 +55,7 @@
     "express-jwt": "5.3.1",
     "formidable": "1.2.1",
     "helmet": "3.12.0",
+    "if-env": "^1.0.4",
     "jsonwebtoken": "8.2.1",
     "lodash": "4.17.10",
     "material-ui": "1.0.0-beta.43",
